@@ -88,4 +88,14 @@ public class Book {
     public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
+
+    /**
+     * Check whether two books are the same
+     * @param otherBook Book object to compare to
+     * @return True if Book objects match, false if they do not
+     */
+    public boolean equals(Book otherBook) {
+        return this.getTitleByAuthor().equals(otherBook.getTitleByAuthor())
+                && this.isbn.equals(otherBook.isbn);
+    }
 }
