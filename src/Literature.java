@@ -1,7 +1,7 @@
 public abstract class Literature {
     private static final int ID_MAGNITUDE = 9;
 
-    private int id;
+    private final int id;
     private String title;
     private String author;
     private String publisher;

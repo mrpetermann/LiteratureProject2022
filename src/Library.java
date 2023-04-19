@@ -7,6 +7,12 @@ public class Library {
         library = new ArrayList<>();
     }
 
+    public Library(Literature[] arr) {
+        this();
+        for(Literature lit : arr)
+            library.add(lit);
+    }
+
     public void add(Literature literature) {
         library.add(literature);
     }
@@ -15,7 +21,8 @@ public class Library {
      * Concatenate literature information for each element in the library
      * @return String formatted as title + author of each element
      */
-    public String printLibrary() {
+    @Override
+    public String toString() {
         String toReturn  = "";
 
         for(Literature literature : library)
